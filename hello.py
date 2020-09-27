@@ -1,4 +1,6 @@
 class Route:
+
+
     def __init__(self, position, possible_next_positons=None):
         self.position = position
         self.possible_next_positions = possible_next_positons
@@ -13,6 +15,8 @@ class Route:
 
 
 class ChessBoard:
+
+
     def __init__(self, start=(0,0)):
         self.routes = [(x,y) for x in range(8) for y in range(8)]
         self.steps = [
@@ -46,7 +50,6 @@ class ChessBoard:
             #dummy_list = [(elem[0], elem[1]) for elem in dummy_list]
             return [(elem[0], elem[1]) for elem in dummy_list]
 
-
     def do_next_step(self):
         #korta ned och flytta till fill_board
         if (route_position:= route[0] if (route:=self.visited[-1].possible_next_positions) else False):
@@ -76,8 +79,6 @@ class ChessBoard:
         self.visited.pop()
         self.visited[-1].pop()
         return
-
-
 
     def fill_board(self):
         for i in range(1000):
