@@ -71,7 +71,6 @@ class ChessBoard:
         #borde inte ingå i denna funktion
         elif len(self.visited)<64:
             self.take_step_back()
-                
         return
 
     def take_step_back(self):
