@@ -11,7 +11,6 @@ class Route:
         self.possible_next_positions.pop(0)
         return
 
-
 class ChessBoard:
     def __init__(self, start=(0,0)):
         self.routes = [(x,y) for x in range(8) for y in range(8)]
@@ -84,10 +83,3 @@ class ChessBoard:
             if len(self.visited) == 64:
                 self.is_filled = True
         return
-
-
-
-my_board = ChessBoard(start=(1,2))
-my_board.fill_board()
-
-
