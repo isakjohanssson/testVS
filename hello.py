@@ -32,6 +32,7 @@ class ChessBoard:
         Add ordered next positions from 
         next positions and number of next positions from the next positions
         '''
+
         self.visited[-1].set_next_positions(
             self.get_ordered_next_positions(        
                 self.get_next_positions(start),
@@ -87,15 +88,6 @@ class ChessBoard:
 
 
 my_board = ChessBoard(start=(1,2))
-
 my_board.fill_board()
-print(len(my_board.visited))
-
-all_positions = [[i,j] for i in range(8) for j in range(8)]
-print(all_positions)
-
-#for position in all_positions:
-   # my_board = ChessBoard(start=(position[0],position[1]))
-    #my_board.fill_board()
 
 
