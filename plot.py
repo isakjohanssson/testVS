@@ -2,7 +2,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot(size, my_board):
+def plot(my_board):
+    size = 8
     chessboard = np.zeros((size,size))
     chessboard[1::2,0::2] = 1
     chessboard[0::2,1::2] = 1
